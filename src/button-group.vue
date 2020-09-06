@@ -7,7 +7,16 @@
 
 <script>
 export default {
-  name: "button-group"
+  name: "button-group",
+  mounted() {
+    console.log(this.$el.children);
+    for (let node of this.$el.children){
+      let name= node.nodeName.toLowerCase()
+      if (name!=='button'){
+        console.warn(`g-button-group的子元应该素全是g-button,你写的是${name}`)
+      }
+    }
+  }
 }
 </script>
 
