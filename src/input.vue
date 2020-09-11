@@ -1,6 +1,11 @@
 <template>
     <div class="wrapper" :class="{error}">
-        <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+        <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+               @change="$emit('change',$event)"
+               @input="$emit('input',$event)"
+               @focus="$emit('focus',$event)"
+               @blur="$emit('blur',$event)"
+        >
         <template v-if="error">
             <icon name="error" class="icon-error"></icon>
             <span class="errorMessage">{{error}}</span>
@@ -11,6 +16,7 @@
 
 <script>
   import Icon from "./icon";
+
   export default {
     components: {Icon},
     name: "GuluInput",
@@ -26,8 +32,8 @@
         type: Boolean,
         default: false
       },
-      error:{
-        type:String
+      error: {
+        type: String
       }
     }
   }
@@ -41,12 +47,13 @@
     $border-radius: 4px;
     $font-size: 14px;
     $box-shadow-color: rgba(0, 0, 0, 0.5);
-    $red:#F1453D;
+    $red: #F1453D;
     .wrapper {
         font-size: $font-size;
         display: inline-flex;
         align-items: center;
-        >:not(:last-child){
+
+        > :not(:last-child) {
             margin-right: .5em;
         }
 
@@ -73,16 +80,19 @@
                 cursor: not-allowed;
             }
         }
-        &.error{
-            >input{
+
+        &.error {
+            > input {
                 border-color: $red;
             }
         }
-        .icon-error{
+
+        .icon-error {
             fill: $red;
         }
-        .errorMessage{
-            color:red;
+
+        .errorMessage {
+            color: red;
         }
     }
 </style>
