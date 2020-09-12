@@ -46,7 +46,9 @@
         <g-input value="小红" :readonly="true"></g-input>
     </div>
     <div class="box">
-        <g-input value="小胖" @change="inputChange"></g-input>
+        <g-input v-model="message"></g-input>
+        <span>{{message}}</span>
+        <button @click="message+=1">+1</button>
     </div>
     <div class="box">
         <g-input value="小明" error="姓名至少为两个字"></g-input>
