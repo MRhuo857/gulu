@@ -1,5 +1,7 @@
 <template>
-    
+    <div class="row">
+        <slot/>
+    </div>
 </template>
 
 <script>
@@ -8,6 +10,9 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+    .row{
+        display: flex;
+    }
 
 </style>
