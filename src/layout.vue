@@ -1,13 +1,38 @@
 <template>
-    
+    <div class="layout" :class="layoutClasses">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
   export default {
-    name: "layout"
+    name: "GuluLayout",
+    data() {
+      return {
+        layoutClasses: {
+          hasSider: false
+        }
+      }
+    },
+    mounted() {
+      this.$children.forEach((vm) => {
+        if (vm.$options.name === 'GuluSider') {
+          this.layoutClasses.hasSider = true
+        }
+      })
+    }
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    .layout {
+        flex-grow: 1;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        &.hasSider{
+            flex-direction: row;
+        }
+    }
 
 </style>
