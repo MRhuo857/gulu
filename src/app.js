@@ -35,9 +35,14 @@ new Vue({
     loading3: false,
     message:'小王'
   },
+  created(){
+    this.$toast('你好',{
+      enableHtml:false,
+    })
+  },
   methods:{
       show(){
-        this.$toast('我是message')
+
       }
   }
 });
