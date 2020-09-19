@@ -58,8 +58,7 @@ new Vue({
               console.log('他说知道了')
             }
           },
-          autoClose:false,
-          autoCloseDelay:3
+          autoClose:3,
         })
       }
   }
