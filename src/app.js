@@ -39,9 +39,18 @@ new Vue({
 
   },
   methods:{
-      show(){
+    show1(){
+      this.show('top')
+    },
+    show2(){
+      this.show('middle')
+    },
+    show3(){
+      this.show('bottom')
+    },
+      show(position){
         this.$toast('你好',{
-          position:'bottom',
+          position,
           enableHtml:false,
           closeButton:{
             text:'知道啦',

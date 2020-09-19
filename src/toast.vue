@@ -1,14 +1,17 @@
 <template>
-    <div class="toast" ref="wrapper" :class="toastClasses">
-        <div class="message">
-            <slot v-if="!enableHtml" ></slot>
-            <div v-else v-html="$slots.default[0]"></div>
-        </div>
-        <div class="line" ref="line"></div>
-        <span class="close" v-if="closeButton" @click="onclickClose">
+    <div class="wrapper" :class="toastClasses">
+        <div class="toast" ref="toast" >
+            <div class="message">
+                <slot v-if="!enableHtml"></slot>
+                <div v-else v-html="$slots.default[0]"></div>
+            </div>
+            <div class="line" ref="line"></div>
+            <span class="close" v-if="closeButton" @click="onclickClose">
             {{closeButton.text}}
         </span>
+        </div>
     </div>
+
 </template>
 
 <script>
@@ -31,39 +34,39 @@
           }
         }
       },
-      enableHtml:{
-        type:Boolean,
-        default:false
+      enableHtml: {
+        type: Boolean,
+        default: false
       },
-      position:{
-        type:String,
-        default:'top',
-        validator(value){
-            return ['top','bottom','middle'].indexOf(value)>=0
+      position: {
+        type: String,
+        default: 'top',
+        validator(value) {
+          return ['top', 'bottom', 'middle'].indexOf(value) >= 0
         }
       }
     },
 
     mounted() {
-     this.execAutoClose()
+      this.execAutoClose()
       this.updateStyle()
     },
-    computed:{
-      toastClasses(){
-        return  {
-          [`position-${this.position}`]:true
+    computed: {
+      toastClasses() {
+        return {
+          [`position-${this.position}`]: true
         }
       }
     },
     methods: {
-      updateStyle(){
-        this.$nextTick(()=>{
-          this.$refs.line.style.height=
-            `${this.$refs.wrapper.getBoundingClientRect().height}px`
+      updateStyle() {
+        this.$nextTick(() => {
+          this.$refs.line.style.height =
+            `${this.$refs.toast.getBoundingClientRect().height}px`
 
         })
       },
-      execAutoClose(){
+      execAutoClose() {
         if (this.autoClose) {
           setTimeout(() => {
             this.close()
@@ -75,9 +78,9 @@
         this.$emit('close')
         this.$destroy()
       },
-      onclickClose(){
+      onclickClose() {
         this.close()
-        if (this.closeButton && typeof this.closeButton.callback==='function'){
+        if (this.closeButton && typeof this.closeButton.callback === 'function') {
           this.closeButton.callback(this)
         }
 
@@ -90,17 +93,54 @@
     $font-size: 14px;
     $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.75);
-    @keyframes fade-in {
-        0%{opacity: 0; transform: translateY(100%)}
-        100%{opacity: 1;transform: translateX(0%)}
+    @keyframes slide-up {
+        0% { opacity: 0;transform: translateY(100%)}
+        100% {opacity: 1;transform: translateY(0%)}
     }
+    @keyframes slide-down {
+        0% { opacity: 0;transform: translateY(-100%)}
+        100% {opacity: 1;transform: translateY(0%)}
+    }
+    @keyframes fade-in {
+        0% { opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .wrapper {
+        left: 50%;
+        position: fixed;
+        transform: translateX(-50%);
+        &.position-top {
+            top: 0;
+            .toast{
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                animation: slide-down 300ms;
+            }
+        }
+
+        &.position-bottom {
+            bottom: 0;
+            .toast{
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                animation: slide-up 300ms;
+            }
+        }
+
+        &.position-middle {
+            top: 50%;
+            transform: translate(-50%) translateY(50%);
+            animation: fade-in 300ms;
+        }
+    }
+
     .toast {
         animation: fade-in 1s;
         font-size: $font-size;
         min-height: $toast-min-height;
         line-height: 1.8;
-        position: fixed;
-        left: 50%;
+
+
         display: flex;
         align-items: center;
         color: white;
@@ -108,30 +148,23 @@
         box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
         padding: 0 16px;
         border-radius: 3px;
-        .message{
+
+        .message {
             padding: 8px 0;
         }
-        .close{
-            padding-left:16px;
+
+        .close {
+            padding-left: 16px;
             flex-shrink: 0;
         }
-        .line{
+
+        .line {
             height: 100%;
             border: 1px solid #666;
             margin-left: 16px;
         }
-        &.position-top{
-            top: 0;
-            transform: translateX(-50%);
-        }
-        &.position-bottom{
-            bottom: 0;
-            transform: translateX(-50%);
-        }
-        &.position-middle{
-            top: 50%;
-            transform: translate(-50%,50%);
-        }
+
+
 
     }
 
