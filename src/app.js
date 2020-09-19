@@ -37,6 +37,7 @@ new Vue({
   },
   created(){
     this.$toast('你好',{
+      position:'middle',
       enableHtml:false,
     })
   },

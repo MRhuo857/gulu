@@ -1,5 +1,5 @@
 <template>
-    <div class="toast" ref="wrapper">
+    <div class="toast" ref="wrapper" :class="toastClasses">
         <div class="message">
             <slot v-if="!enableHtml" ></slot>
             <div v-else v-html="$slots.default[0]"></div>
@@ -34,6 +34,13 @@
       enableHtml:{
         type:Boolean,
         default:false
+      },
+      position:{
+        type:String,
+        default:'top',
+        validator(value){
+            return ['top','bottom','middle'].indexOf(value)>=0
+        }
       }
     },
 
@@ -41,7 +48,13 @@
      this.execAutoClose()
       this.updateStyle()
     },
-
+    computed:{
+      toastClasses(){
+        return  {
+          [`position-${this.position}`]:true
+        }
+      }
+    },
     methods: {
       updateStyle(){
         this.$nextTick(()=>{
@@ -81,9 +94,7 @@
         min-height: $toast-min-height;
         line-height: 1.8;
         position: fixed;
-        top: 0;
         left: 50%;
-        transform: translateX(-50%);
         display: flex;
         align-items: center;
         color: white;
@@ -102,6 +113,18 @@
             height: 100%;
             border: 1px solid #666;
             margin-left: 16px;
+        }
+        &.position-top{
+            top: 0;
+            transform: translateX(-50%);
+        }
+        &.position-bottom{
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+        &.position-middle{
+            top: 50%;
+            transform: translate(-50%,50%);
         }
 
     }
