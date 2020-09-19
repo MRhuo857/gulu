@@ -36,14 +36,22 @@ new Vue({
     message:'小王'
   },
   created(){
-    this.$toast('你好',{
-      position:'middle',
-      enableHtml:false,
-    })
+
   },
   methods:{
       show(){
-
+        this.$toast('你好',{
+          position:'middle',
+          enableHtml:false,
+          closeButton:{
+            text:'知道啦',
+            callback(){
+              console.log('他说知道了')
+            }
+          },
+          autoClose:false,
+          autoCloseDelay:3
+        })
       }
   }
 });
