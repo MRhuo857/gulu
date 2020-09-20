@@ -8,9 +8,9 @@
   export default {
     name: "GuluTabsItem",
     inject: ['eventBus'],
-    data(){
-      return{
-        active:false
+    data() {
+      return {
+        active: false
       }
     },
     props: {
@@ -24,10 +24,10 @@
 
       }
     },
-    computed:{
-      classes(){
-        return{
-          active:this.active
+    computed: {
+      classes() {
+        return {
+          active: this.active
         }
       }
     },
@@ -45,12 +45,19 @@
 </script>
 
 <style lang="scss" scoped>
-.tabs-item{
-    padding: 0 1em;
-    flex-shrink: 0;
-    &.active{
-        background: red;
-    }
+    .tabs-item {
+        padding: 0 1em;
+        flex-shrink: 0;
+        cursor: pointer;
+        border: 1px solid green;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-}
+        &.active {
+            background: red;
+        }
+
+    }
 </style>
