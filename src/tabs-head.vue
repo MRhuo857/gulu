@@ -1,21 +1,33 @@
 <template>
     <div class="tabs-head">
         <slot></slot>
-        <slot name="actions"></slot>
+        <div class="action-wrapper">
+            <slot name="actions"></slot>
+        </div>
+
     </div>
 </template>
 
 <script>
   export default {
     name: "GuluTabsHead",
-    inject:['eventBus'],
+    inject: ['eventBus'],
     created() {
-      console.log('爷爷给爸爸的');
-      console.log(this.eventBus);
     }
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+    $tab-height: 40px;
+    .tabs-head {
+        display: flex;
+        height: $tab-height;
+        border: 1px solid red;
+        align-items: center;
+        justify-content: flex-start;
 
+        > .action-wrapper {
+            margin-left: auto;
+        }
+    }
 </style>

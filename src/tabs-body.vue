@@ -9,8 +9,6 @@
     name: "GuluTabsBody",
     inject:['eventBus'],
     created() {
-      console.log('爷爷给body的');
-      console.log(this.eventBus);
     }
   }
 </script>
