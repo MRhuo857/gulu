@@ -31,6 +31,7 @@
         align-items: center;
         justify-content: flex-start;
         position: relative;
+        border-bottom: 1px solid #dddddd;
 
         > .line {
             border-bottom: 2px solid blue;
@@ -41,6 +42,10 @@
 
         > .action-wrapper {
             margin-left: auto;
+            display:flex;
+            justify-content: center;
+            align-content: center;
+            padding: 0 1em;
 
         }
     }

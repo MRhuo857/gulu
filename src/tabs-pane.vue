@@ -38,6 +38,7 @@
 <style lang="scss" scoped>
     .tabs-pane{
         &.active{
+            padding:0 1em;
 
         }
     }
