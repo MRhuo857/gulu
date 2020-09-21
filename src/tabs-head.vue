@@ -14,8 +14,10 @@
     name: "GuluTabsHead",
     inject: ['eventBus'],
     created() {
-      this.eventBus.$on('update:selected',(item,vm)=>{
-
+      this.eventBus.$on('update:selected', (item, vm) => {
+        let {width,left}=vm.$el.getBoundingClientRect()
+        this.$refs.line.style.width=`${width}px`
+        this.$refs.line.style.left=`${left}px`
       })
     }
   }
@@ -31,10 +33,10 @@
         position: relative;
 
         > .line {
-            width: 100px;
-            border-bottom: 1px solid #bbbbbb;
+            border-bottom: 2px solid blue;
             position: absolute;
             bottom: 0;
+            transition:all 200ms;
         }
 
         > .action-wrapper {
