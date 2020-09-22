@@ -22,22 +22,26 @@
         }
       }
     },
-    data(){
+    data() {
       return {
-      eventBus:new Vue()
+        eventBus: new Vue()
       }
     },
     provide() {
       return {
-        eventBus:this.eventBus
+        eventBus: this.eventBus
       }
     },
     mounted() {
-      this.$children.forEach((vm)=>{
-        if (vm.$options.name==='GuluTabsHead'){
-          vm.$children.forEach((childVm)=>{
-            if(childVm.$options.name==='GuluTabsItem' && childVm.name===this.selected){
-              this.eventBus.$emit('update:selected',this.selected,childVm)
+      if (this.$children.length === 0) {
+        console && console.warn &&
+        console.warn('tabs的子组件应该是tabs-head,tabs-body，但你没有写')
+      }
+      this.$children.forEach((vm) => {
+        if (vm.$options.name === 'GuluTabsHead') {
+          vm.$children.forEach((childVm) => {
+            if (childVm.$options.name === 'GuluTabsItem' && childVm.name === this.selected) {
+              this.eventBus.$emit('update:selected', this.selected, childVm)
             }
           })
         }
