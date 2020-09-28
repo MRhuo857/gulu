@@ -9,26 +9,6 @@ import GlobalLayout from "C:\\Users\\mr.huo\\Desktop\\gulu\\node_modules\\@vuepr
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
-    name: "v-7d53a76b",
-    path: "/get-started/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7d53a76b").then(next)
-    },
-  },
-  {
-    path: "/get-started/index.html",
-    redirect: "/get-started/"
-  },
-  {
-    name: "v-535973f4",
-    path: "/components/button.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-535973f4").then(next)
-    },
-  },
-  {
     name: "v-6a317ff4",
     path: "/",
     component: GlobalLayout,
@@ -39,6 +19,26 @@ export const routes = [
   {
     path: "/index.html",
     redirect: "/"
+  },
+  {
+    name: "v-535973f4",
+    path: "/components/button.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-535973f4").then(next)
+    },
+  },
+  {
+    name: "v-7d53a76b",
+    path: "/get-started/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-7d53a76b").then(next)
+    },
+  },
+  {
+    path: "/get-started/index.html",
+    redirect: "/get-started/"
   },
   {
     name: "v-6d0c05c9",

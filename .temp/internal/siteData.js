@@ -4,25 +4,16 @@
 export const siteData = {
   "title": "极简UI",
   "description": "一个好用的UI框架",
-  "base": "/",
+  "base": "/gulu/",
   "headTags": [],
   "pages": [
     {
-      "title": "开始",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": "：",
-        "6": "开",
-        "7": "始"
-      },
-      "regularPath": "/get-started/",
-      "relativePath": "get-started/README.md",
-      "key": "v-7d53a76b",
-      "path": "/get-started/"
+      "title": "极简UI官网",
+      "frontmatter": {},
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-6a317ff4",
+      "path": "/"
     },
     {
       "title": "按钮",
@@ -61,12 +52,21 @@ export const siteData = {
       "path": "/components/button.html"
     },
     {
-      "title": "极简UI官网",
-      "frontmatter": {},
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-6a317ff4",
-      "path": "/"
+      "title": "开始",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": "：",
+        "6": "开",
+        "7": "始"
+      },
+      "regularPath": "/get-started/",
+      "relativePath": "get-started/README.md",
+      "key": "v-7d53a76b",
+      "path": "/get-started/"
     },
     {
       "title": "安装",

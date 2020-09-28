@@ -1,4 +1,5 @@
 module.exports = {
+  base:'/gulu/',
   title: '极简UI',
   description: '一个好用的UI框架',
   themeConfig: {
