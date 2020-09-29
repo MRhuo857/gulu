@@ -29,6 +29,46 @@ export const routes = [
     },
   },
   {
+    name: "v-0e404ed8",
+    path: "/components/collapse.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-0e404ed8").then(next)
+    },
+  },
+  {
+    name: "v-5f08e398",
+    path: "/components/grid.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-5f08e398").then(next)
+    },
+  },
+  {
+    name: "v-22945344",
+    path: "/components/input.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-22945344").then(next)
+    },
+  },
+  {
+    name: "v-17865330",
+    path: "/components/popover.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-17865330").then(next)
+    },
+  },
+  {
+    name: "v-156da8f4",
+    path: "/components/layout.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-156da8f4").then(next)
+    },
+  },
+  {
     name: "v-7d53a76b",
     path: "/get-started/",
     component: GlobalLayout,
@@ -51,6 +91,22 @@ export const routes = [
   {
     path: "/install/index.html",
     redirect: "/install/"
+  },
+  {
+    name: "v-376cc934",
+    path: "/components/tabs.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-376cc934").then(next)
+    },
+  },
+  {
+    name: "v-23fdbe64",
+    path: "/components/toast.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-23fdbe64").then(next)
+    },
   },
   {
     path: '*',

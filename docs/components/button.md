@@ -1,13 +1,15 @@
 ---
-title：button
+title:button
 sidebarDepth:2
 ---
 
 
-# 按钮
+# Button
 
-使用方法
+预览
 
 <ClientOnly>
 <button-demos></button-demos>
 </ClientOnly>
+
+使用方法

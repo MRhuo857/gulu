@@ -1,0 +1,6 @@
+---
+title:Collapse
+---
+
+
+# Collapse

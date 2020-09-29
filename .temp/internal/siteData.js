@@ -16,14 +16,14 @@ export const siteData = {
       "path": "/"
     },
     {
-      "title": "按钮",
+      "title": "Button",
       "frontmatter": {
         "0": "t",
         "1": "i",
         "2": "t",
         "3": "l",
         "4": "e",
-        "5": "：",
+        "5": ":",
         "6": "b",
         "7": "u",
         "8": "t",
@@ -50,6 +50,111 @@ export const siteData = {
       "relativePath": "components/button.md",
       "key": "v-535973f4",
       "path": "/components/button.html"
+    },
+    {
+      "title": "Collapse",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "C",
+        "7": "o",
+        "8": "l",
+        "9": "l",
+        "10": "a",
+        "11": "p",
+        "12": "s",
+        "13": "e"
+      },
+      "regularPath": "/components/collapse.html",
+      "relativePath": "components/collapse.md",
+      "key": "v-0e404ed8",
+      "path": "/components/collapse.html"
+    },
+    {
+      "title": "Grid",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "G",
+        "7": "r",
+        "8": "i",
+        "9": "d"
+      },
+      "regularPath": "/components/grid.html",
+      "relativePath": "components/grid.md",
+      "key": "v-5f08e398",
+      "path": "/components/grid.html"
+    },
+    {
+      "title": "Input",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "I",
+        "7": "n",
+        "8": "p",
+        "9": "u",
+        "10": "t"
+      },
+      "regularPath": "/components/input.html",
+      "relativePath": "components/input.md",
+      "key": "v-22945344",
+      "path": "/components/input.html"
+    },
+    {
+      "title": "Popover",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "P",
+        "7": "o",
+        "8": "p",
+        "9": "o",
+        "10": "v",
+        "11": "e",
+        "12": "r"
+      },
+      "regularPath": "/components/popover.html",
+      "relativePath": "components/popover.md",
+      "key": "v-17865330",
+      "path": "/components/popover.html"
+    },
+    {
+      "title": "Layout",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "L",
+        "7": "a",
+        "8": "y",
+        "9": "o",
+        "10": "u",
+        "11": "t"
+      },
+      "regularPath": "/components/layout.html",
+      "relativePath": "components/layout.md",
+      "key": "v-156da8f4",
+      "path": "/components/layout.html"
     },
     {
       "title": "开始",
@@ -84,9 +189,62 @@ export const siteData = {
       "relativePath": "install/README.md",
       "key": "v-6d0c05c9",
       "path": "/install/"
+    },
+    {
+      "title": "Tabs",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "T",
+        "7": "a",
+        "8": "b",
+        "9": "s"
+      },
+      "regularPath": "/components/tabs.html",
+      "relativePath": "components/tabs.md",
+      "key": "v-376cc934",
+      "path": "/components/tabs.html"
+    },
+    {
+      "title": "Toast",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "T",
+        "7": "o",
+        "8": "a",
+        "9": "s",
+        "10": "t"
+      },
+      "regularPath": "/components/toast.html",
+      "relativePath": "components/toast.md",
+      "key": "v-23fdbe64",
+      "path": "/components/toast.html"
     }
   ],
   "themeConfig": {
+    "nav": [
+      {
+        "text": "主页",
+        "link": "/"
+      },
+      {
+        "text": "文档",
+        "link": "/guide/"
+      },
+      {
+        "text": "Github",
+        "link": "https://github.com/MRhuo857"
+      }
+    ],
     "sidebar": [
       {
         "title": "入门",
@@ -100,7 +258,14 @@ export const siteData = {
         "title": "组件",
         "collapsable": false,
         "children": [
-          "/components/button"
+          "/components/button",
+          "/components/grid",
+          "/components/input",
+          "/components/layout",
+          "/components/popover",
+          "/components/tabs",
+          "/components/toast",
+          "/components/collapse"
         ]
       }
     ]
