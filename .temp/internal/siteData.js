@@ -8,15 +8,7 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "极简UI官网",
-      "frontmatter": {},
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-6a317ff4",
-      "path": "/"
-    },
-    {
-      "title": "Button",
+      "title": "Button-按钮",
       "frontmatter": {
         "0": "t",
         "1": "i",
@@ -49,30 +41,27 @@ export const siteData = {
       "regularPath": "/components/button.html",
       "relativePath": "components/button.md",
       "key": "v-535973f4",
-      "path": "/components/button.html"
+      "path": "/components/button.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "预览",
+          "slug": "预览"
+        },
+        {
+          "level": 2,
+          "title": "使用方法",
+          "slug": "使用方法"
+        }
+      ]
     },
     {
-      "title": "Collapse",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "C",
-        "7": "o",
-        "8": "l",
-        "9": "l",
-        "10": "a",
-        "11": "p",
-        "12": "s",
-        "13": "e"
-      },
-      "regularPath": "/components/collapse.html",
-      "relativePath": "components/collapse.md",
-      "key": "v-0e404ed8",
-      "path": "/components/collapse.html"
+      "title": "极简UI官网",
+      "frontmatter": {},
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-6a317ff4",
+      "path": "/"
     },
     {
       "title": "Grid",
@@ -92,6 +81,27 @@ export const siteData = {
       "relativePath": "components/grid.md",
       "key": "v-5f08e398",
       "path": "/components/grid.html"
+    },
+    {
+      "title": "Layout",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "L",
+        "7": "a",
+        "8": "y",
+        "9": "o",
+        "10": "u",
+        "11": "t"
+      },
+      "regularPath": "/components/layout.html",
+      "relativePath": "components/layout.md",
+      "key": "v-156da8f4",
+      "path": "/components/layout.html"
     },
     {
       "title": "Input",
@@ -136,61 +146,6 @@ export const siteData = {
       "path": "/components/popover.html"
     },
     {
-      "title": "Layout",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "L",
-        "7": "a",
-        "8": "y",
-        "9": "o",
-        "10": "u",
-        "11": "t"
-      },
-      "regularPath": "/components/layout.html",
-      "relativePath": "components/layout.md",
-      "key": "v-156da8f4",
-      "path": "/components/layout.html"
-    },
-    {
-      "title": "开始",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": "：",
-        "6": "开",
-        "7": "始"
-      },
-      "regularPath": "/get-started/",
-      "relativePath": "get-started/README.md",
-      "key": "v-7d53a76b",
-      "path": "/get-started/"
-    },
-    {
-      "title": "安装",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "安",
-        "7": "装"
-      },
-      "regularPath": "/install/",
-      "relativePath": "install/README.md",
-      "key": "v-6d0c05c9",
-      "path": "/install/"
-    },
-    {
       "title": "Tabs",
       "frontmatter": {
         "0": "t",
@@ -228,6 +183,63 @@ export const siteData = {
       "relativePath": "components/toast.md",
       "key": "v-23fdbe64",
       "path": "/components/toast.html"
+    },
+    {
+      "title": "开始",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": "：",
+        "6": "开",
+        "7": "始"
+      },
+      "regularPath": "/get-started/",
+      "relativePath": "get-started/README.md",
+      "key": "v-7d53a76b",
+      "path": "/get-started/"
+    },
+    {
+      "title": "安装",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "安",
+        "7": "装"
+      },
+      "regularPath": "/install/",
+      "relativePath": "install/README.md",
+      "key": "v-6d0c05c9",
+      "path": "/install/"
+    },
+    {
+      "title": "Collapse",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "C",
+        "7": "o",
+        "8": "l",
+        "9": "l",
+        "10": "a",
+        "11": "p",
+        "12": "s",
+        "13": "e"
+      },
+      "regularPath": "/components/collapse.html",
+      "relativePath": "components/collapse.md",
+      "key": "v-0e404ed8",
+      "path": "/components/collapse.html"
     }
   ],
   "themeConfig": {
