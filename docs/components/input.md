@@ -5,8 +5,10 @@ title:Input
 
 # Input-输入框
 ## 简单用法
+<ClientOnly>
 <input-demos></input-demos>
-## 代码
+</ClientOnly>
+
 ::: details 点击查看代码
 ```html
     <div style="padding-top: 16px;">
@@ -19,8 +21,10 @@ title:Input
 :::
 
 ## 双向绑定
+<ClientOnly>
 <input-demos2></input-demos2>
-## 代码
+</ClientOnly>
+
 ::: details 点击查看代码
 ```html
     <div style="padding-top: 16px;">

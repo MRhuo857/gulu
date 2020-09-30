@@ -25,19 +25,23 @@ export const routes = [
     },
   },
   {
+    name: "v-6a317ff4",
+    path: "/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6a317ff4").then(next)
+    },
+  },
+  {
+    path: "/index.html",
+    redirect: "/"
+  },
+  {
     name: "v-5f08e398",
     path: "/components/grid.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-5f08e398").then(next)
-    },
-  },
-  {
-    name: "v-22945344",
-    path: "/components/input.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-22945344").then(next)
     },
   },
   {
@@ -49,11 +53,11 @@ export const routes = [
     },
   },
   {
-    name: "v-17865330",
-    path: "/components/popover.html",
+    name: "v-22945344",
+    path: "/components/input.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-17865330").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-22945344").then(next)
     },
   },
   {
@@ -65,24 +69,20 @@ export const routes = [
     },
   },
   {
+    name: "v-17865330",
+    path: "/components/popover.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-17865330").then(next)
+    },
+  },
+  {
     name: "v-23fdbe64",
     path: "/components/toast.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-23fdbe64").then(next)
     },
-  },
-  {
-    name: "v-6d0c05c9",
-    path: "/install/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6d0c05c9").then(next)
-    },
-  },
-  {
-    path: "/install/index.html",
-    redirect: "/install/"
   },
   {
     name: "v-7d53a76b",
@@ -97,16 +97,16 @@ export const routes = [
     redirect: "/get-started/"
   },
   {
-    name: "v-6a317ff4",
-    path: "/",
+    name: "v-6d0c05c9",
+    path: "/install/",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6a317ff4").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-6d0c05c9").then(next)
     },
   },
   {
-    path: "/index.html",
-    redirect: "/"
+    path: "/install/index.html",
+    redirect: "/install/"
   },
   {
     path: '*',

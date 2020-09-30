@@ -79,6 +79,14 @@ export const siteData = {
       "path": "/components/collapse.html"
     },
     {
+      "title": "极简UI官网",
+      "frontmatter": {},
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-6a317ff4",
+      "path": "/"
+    },
+    {
       "title": "Grid-24网格",
       "frontmatter": {
         "0": "t",
@@ -115,6 +123,39 @@ export const siteData = {
       ]
     },
     {
+      "title": "Layout-布局",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "L",
+        "7": "a",
+        "8": "y",
+        "9": "o",
+        "10": "u",
+        "11": "t"
+      },
+      "regularPath": "/components/layout.html",
+      "relativePath": "components/layout.md",
+      "key": "v-156da8f4",
+      "path": "/components/layout.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "预览",
+          "slug": "预览"
+        },
+        {
+          "level": 2,
+          "title": "预览",
+          "slug": "预览-2"
+        }
+      ]
+    },
+    {
       "title": "Input-输入框",
       "frontmatter": {
         "0": "t",
@@ -141,18 +182,8 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "代码",
-          "slug": "代码"
-        },
-        {
-          "level": 2,
           "title": "双向绑定",
           "slug": "双向绑定"
-        },
-        {
-          "level": 2,
-          "title": "代码",
-          "slug": "代码-2"
         },
         {
           "level": 2,
@@ -182,7 +213,7 @@ export const siteData = {
       ]
     },
     {
-      "title": "Layout",
+      "title": "Tabs",
       "frontmatter": {
         "0": "t",
         "1": "i",
@@ -190,17 +221,15 @@ export const siteData = {
         "3": "l",
         "4": "e",
         "5": ":",
-        "6": "L",
+        "6": "T",
         "7": "a",
-        "8": "y",
-        "9": "o",
-        "10": "u",
-        "11": "t"
+        "8": "b",
+        "9": "s"
       },
-      "regularPath": "/components/layout.html",
-      "relativePath": "components/layout.md",
-      "key": "v-156da8f4",
-      "path": "/components/layout.html"
+      "regularPath": "/components/tabs.html",
+      "relativePath": "components/tabs.md",
+      "key": "v-376cc934",
+      "path": "/components/tabs.html"
     },
     {
       "title": "Popover",
@@ -225,25 +254,6 @@ export const siteData = {
       "path": "/components/popover.html"
     },
     {
-      "title": "Tabs",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "T",
-        "7": "a",
-        "8": "b",
-        "9": "s"
-      },
-      "regularPath": "/components/tabs.html",
-      "relativePath": "components/tabs.md",
-      "key": "v-376cc934",
-      "path": "/components/tabs.html"
-    },
-    {
       "title": "Toast",
       "frontmatter": {
         "0": "t",
@@ -264,23 +274,6 @@ export const siteData = {
       "path": "/components/toast.html"
     },
     {
-      "title": "安装",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "安",
-        "7": "装"
-      },
-      "regularPath": "/install/",
-      "relativePath": "install/README.md",
-      "key": "v-6d0c05c9",
-      "path": "/install/"
-    },
-    {
       "title": "开始",
       "frontmatter": {
         "0": "t",
@@ -298,12 +291,21 @@ export const siteData = {
       "path": "/get-started/"
     },
     {
-      "title": "极简UI官网",
-      "frontmatter": {},
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-6a317ff4",
-      "path": "/"
+      "title": "安装",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "安",
+        "7": "装"
+      },
+      "regularPath": "/install/",
+      "relativePath": "install/README.md",
+      "key": "v-6d0c05c9",
+      "path": "/install/"
     }
   ],
   "themeConfig": {

@@ -22,21 +22,21 @@
         margin-bottom: 50px;
         >.g-header{
             height: 50px;
-            background:#7dbcea ;
+            background:lightskyblue ;
             display:flex;
             justify-content: center;
             align-items: center;
         }
         >.g-content{
             height: 100px;
-            background:rgba(16, 142, 233, 1);
+            background:deepskyblue;
             display:flex;
             justify-content: center;
             align-items: center;
         }
         >.g-footer{
             height: 50px;
-            background:#7dbcea ;
+            background:lightskyblue ;
             display:flex;
             justify-content: center;
             align-items: center;
@@ -46,10 +46,10 @@
 </style>
 <script>
   import GLayout from '../../../src/layout'
-  import GHeader from '../../../src/layout'
-  import GFooter from '../../../src/layout'
-  import GContent from '../../../src/layout'
-  import GSider from '../../../src/layout'
+  import GHeader from '../../../src/header'
+  import GFooter from '../../../src/footer'
+  import GContent from '../../../src/content'
+  import GSider from '../../../src/sider'
   export default {
     components: {GLayout, GHeader, GFooter, GContent, GSider},
   }
