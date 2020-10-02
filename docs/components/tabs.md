@@ -4,7 +4,7 @@ title:Tabs
 
 
 # Tabs
-## 点击弹出
+## 点击切换
 <ClientOnly>
 <tab-demos></tab-demos>
 </ClientOnly>

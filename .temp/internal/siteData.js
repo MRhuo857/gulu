@@ -8,6 +8,21 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
+      "title": "极简UI官网",
+      "frontmatter": {},
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-6a317ff4",
+      "path": "/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "写在前面",
+          "slug": "写在前面"
+        }
+      ]
+    },
+    {
       "title": "Button-按钮",
       "frontmatter": {
         "0": "t",
@@ -76,34 +91,7 @@ export const siteData = {
       "regularPath": "/components/collapse.html",
       "relativePath": "components/collapse.md",
       "key": "v-0e404ed8",
-      "path": "/components/collapse.html"
-    },
-    {
-      "title": "极简UI官网",
-      "frontmatter": {},
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-6a317ff4",
-      "path": "/"
-    },
-    {
-      "title": "Grid-24网格",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "G",
-        "7": "r",
-        "8": "i",
-        "9": "d"
-      },
-      "regularPath": "/components/grid.html",
-      "relativePath": "components/grid.md",
-      "key": "v-5f08e398",
-      "path": "/components/grid.html",
+      "path": "/components/collapse.html",
       "headers": [
         {
           "level": 2,
@@ -112,13 +100,8 @@ export const siteData = {
         },
         {
           "level": 2,
-          "title": "设置gutter",
-          "slug": "设置gutter"
-        },
-        {
-          "level": 2,
-          "title": "设置间隔",
-          "slug": "设置间隔"
+          "title": "使用方法",
+          "slug": "使用方法"
         }
       ]
     },
@@ -218,6 +201,68 @@ export const siteData = {
       ]
     },
     {
+      "title": "Grid-24网格",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "G",
+        "7": "r",
+        "8": "i",
+        "9": "d"
+      },
+      "regularPath": "/components/grid.html",
+      "relativePath": "components/grid.md",
+      "key": "v-5f08e398",
+      "path": "/components/grid.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "预览",
+          "slug": "预览"
+        },
+        {
+          "level": 2,
+          "title": "设置gutter",
+          "slug": "设置gutter"
+        },
+        {
+          "level": 2,
+          "title": "设置间隔",
+          "slug": "设置间隔"
+        }
+      ]
+    },
+    {
+      "title": "Tabs",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "T",
+        "7": "a",
+        "8": "b",
+        "9": "s"
+      },
+      "regularPath": "/components/tabs.html",
+      "relativePath": "components/tabs.md",
+      "key": "v-376cc934",
+      "path": "/components/tabs.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "点击切换",
+          "slug": "点击切换"
+        }
+      ]
+    },
+    {
       "title": "Popover-弹出层",
       "frontmatter": {
         "0": "t",
@@ -250,49 +295,6 @@ export const siteData = {
           "slug": "hover弹出"
         }
       ]
-    },
-    {
-      "title": "Tabs",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "T",
-        "7": "a",
-        "8": "b",
-        "9": "s"
-      },
-      "regularPath": "/components/tabs.html",
-      "relativePath": "components/tabs.md",
-      "key": "v-376cc934",
-      "path": "/components/tabs.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "点击弹出",
-          "slug": "点击弹出"
-        }
-      ]
-    },
-    {
-      "title": "开始",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": "：",
-        "6": "开",
-        "7": "始"
-      },
-      "regularPath": "/get-started/",
-      "relativePath": "get-started/README.md",
-      "key": "v-7d53a76b",
-      "path": "/get-started/"
     },
     {
       "title": "Toast",
@@ -346,7 +348,19 @@ export const siteData = {
       "regularPath": "/install/",
       "relativePath": "install/README.md",
       "key": "v-6d0c05c9",
-      "path": "/install/"
+      "path": "/install/",
+      "headers": [
+        {
+          "level": 2,
+          "title": "yarn",
+          "slug": "yarn"
+        },
+        {
+          "level": 2,
+          "title": "npm",
+          "slug": "npm"
+        }
+      ]
     }
   ],
   "themeConfig": {
@@ -369,8 +383,8 @@ export const siteData = {
         "title": "入门",
         "collapsable": false,
         "children": [
-          "/install/",
-          "/get-started/"
+          "/",
+          "/install/"
         ]
       },
       {

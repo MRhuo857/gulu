@@ -9,6 +9,18 @@ import GlobalLayout from "C:\\Users\\mr.huo\\Desktop\\gulu\\node_modules\\@vuepr
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-6a317ff4",
+    path: "/",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-6a317ff4").then(next)
+    },
+  },
+  {
+    path: "/index.html",
+    redirect: "/"
+  },
+  {
     name: "v-535973f4",
     path: "/components/button.html",
     component: GlobalLayout,
@@ -22,26 +34,6 @@ export const routes = [
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-0e404ed8").then(next)
-    },
-  },
-  {
-    name: "v-6a317ff4",
-    path: "/",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-6a317ff4").then(next)
-    },
-  },
-  {
-    path: "/index.html",
-    redirect: "/"
-  },
-  {
-    name: "v-5f08e398",
-    path: "/components/grid.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-5f08e398").then(next)
     },
   },
   {
@@ -61,11 +53,11 @@ export const routes = [
     },
   },
   {
-    name: "v-17865330",
-    path: "/components/popover.html",
+    name: "v-5f08e398",
+    path: "/components/grid.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-17865330").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-5f08e398").then(next)
     },
   },
   {
@@ -77,16 +69,12 @@ export const routes = [
     },
   },
   {
-    name: "v-7d53a76b",
-    path: "/get-started/",
+    name: "v-17865330",
+    path: "/components/popover.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-7d53a76b").then(next)
+      ensureAsyncComponentsLoaded("Layout", "v-17865330").then(next)
     },
-  },
-  {
-    path: "/get-started/index.html",
-    redirect: "/get-started/"
   },
   {
     name: "v-23fdbe64",
