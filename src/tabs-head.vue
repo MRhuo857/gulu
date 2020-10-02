@@ -10,7 +10,7 @@
 </template>
 <script>
   export default {
-    name: "MgTabsHead",
+    name: "GuluTabsHead",
     inject: ["eventBus"],
     mounted() {
       this.eventBus.$on("update:selected", (item, vm) => {
