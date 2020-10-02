@@ -8,37 +8,6 @@ export const siteData = {
   "headTags": [],
   "pages": [
     {
-      "title": "极简UI官网",
-      "frontmatter": {},
-      "regularPath": "/",
-      "relativePath": "README.md",
-      "key": "v-6a317ff4",
-      "path": "/"
-    },
-    {
-      "title": "Collapse",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "C",
-        "7": "o",
-        "8": "l",
-        "9": "l",
-        "10": "a",
-        "11": "p",
-        "12": "s",
-        "13": "e"
-      },
-      "regularPath": "/components/collapse.html",
-      "relativePath": "components/collapse.md",
-      "key": "v-0e404ed8",
-      "path": "/components/collapse.html"
-    },
-    {
       "title": "Button-按钮",
       "frontmatter": {
         "0": "t",
@@ -87,6 +56,37 @@ export const siteData = {
       ]
     },
     {
+      "title": "Collapse",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "C",
+        "7": "o",
+        "8": "l",
+        "9": "l",
+        "10": "a",
+        "11": "p",
+        "12": "s",
+        "13": "e"
+      },
+      "regularPath": "/components/collapse.html",
+      "relativePath": "components/collapse.md",
+      "key": "v-0e404ed8",
+      "path": "/components/collapse.html"
+    },
+    {
+      "title": "极简UI官网",
+      "frontmatter": {},
+      "regularPath": "/",
+      "relativePath": "README.md",
+      "key": "v-6a317ff4",
+      "path": "/"
+    },
+    {
       "title": "Grid-24网格",
       "frontmatter": {
         "0": "t",
@@ -119,6 +119,44 @@ export const siteData = {
           "level": 2,
           "title": "设置间隔",
           "slug": "设置间隔"
+        }
+      ]
+    },
+    {
+      "title": "Layout-布局",
+      "frontmatter": {
+        "0": "t",
+        "1": "i",
+        "2": "t",
+        "3": "l",
+        "4": "e",
+        "5": ":",
+        "6": "L",
+        "7": "a",
+        "8": "y",
+        "9": "o",
+        "10": "u",
+        "11": "t"
+      },
+      "regularPath": "/components/layout.html",
+      "relativePath": "components/layout.md",
+      "key": "v-156da8f4",
+      "path": "/components/layout.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "布局一",
+          "slug": "布局一"
+        },
+        {
+          "level": 2,
+          "title": "布局二",
+          "slug": "布局二"
+        },
+        {
+          "level": 2,
+          "title": "布局三",
+          "slug": "布局三"
         }
       ]
     },
@@ -180,44 +218,6 @@ export const siteData = {
       ]
     },
     {
-      "title": "Layout-布局",
-      "frontmatter": {
-        "0": "t",
-        "1": "i",
-        "2": "t",
-        "3": "l",
-        "4": "e",
-        "5": ":",
-        "6": "L",
-        "7": "a",
-        "8": "y",
-        "9": "o",
-        "10": "u",
-        "11": "t"
-      },
-      "regularPath": "/components/layout.html",
-      "relativePath": "components/layout.md",
-      "key": "v-156da8f4",
-      "path": "/components/layout.html",
-      "headers": [
-        {
-          "level": 2,
-          "title": "布局一",
-          "slug": "布局一"
-        },
-        {
-          "level": 2,
-          "title": "布局二",
-          "slug": "布局二"
-        },
-        {
-          "level": 2,
-          "title": "布局三",
-          "slug": "布局三"
-        }
-      ]
-    },
-    {
       "title": "Popover-弹出层",
       "frontmatter": {
         "0": "t",
@@ -268,7 +268,14 @@ export const siteData = {
       "regularPath": "/components/tabs.html",
       "relativePath": "components/tabs.md",
       "key": "v-376cc934",
-      "path": "/components/tabs.html"
+      "path": "/components/tabs.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "点击弹出",
+          "slug": "点击弹出"
+        }
+      ]
     },
     {
       "title": "开始",
@@ -305,7 +312,24 @@ export const siteData = {
       "regularPath": "/components/toast.html",
       "relativePath": "components/toast.md",
       "key": "v-23fdbe64",
-      "path": "/components/toast.html"
+      "path": "/components/toast.html",
+      "headers": [
+        {
+          "level": 2,
+          "title": "点击弹出",
+          "slug": "点击弹出"
+        },
+        {
+          "level": 2,
+          "title": "设置关闭按钮",
+          "slug": "设置关闭按钮"
+        },
+        {
+          "level": 2,
+          "title": "支持HTML语法",
+          "slug": "支持html语法"
+        }
+      ]
     },
     {
       "title": "安装",

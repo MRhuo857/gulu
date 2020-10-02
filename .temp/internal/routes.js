@@ -9,6 +9,22 @@ import GlobalLayout from "C:\\Users\\mr.huo\\Desktop\\gulu\\node_modules\\@vuepr
 injectComponentOption(GlobalLayout, 'mixins', rootMixins)
 export const routes = [
   {
+    name: "v-535973f4",
+    path: "/components/button.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-535973f4").then(next)
+    },
+  },
+  {
+    name: "v-0e404ed8",
+    path: "/components/collapse.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-0e404ed8").then(next)
+    },
+  },
+  {
     name: "v-6a317ff4",
     path: "/",
     component: GlobalLayout,
@@ -21,22 +37,6 @@ export const routes = [
     redirect: "/"
   },
   {
-    name: "v-0e404ed8",
-    path: "/components/collapse.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-0e404ed8").then(next)
-    },
-  },
-  {
-    name: "v-535973f4",
-    path: "/components/button.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-535973f4").then(next)
-    },
-  },
-  {
     name: "v-5f08e398",
     path: "/components/grid.html",
     component: GlobalLayout,
@@ -45,19 +45,19 @@ export const routes = [
     },
   },
   {
-    name: "v-22945344",
-    path: "/components/input.html",
-    component: GlobalLayout,
-    beforeEnter: (to, from, next) => {
-      ensureAsyncComponentsLoaded("Layout", "v-22945344").then(next)
-    },
-  },
-  {
     name: "v-156da8f4",
     path: "/components/layout.html",
     component: GlobalLayout,
     beforeEnter: (to, from, next) => {
       ensureAsyncComponentsLoaded("Layout", "v-156da8f4").then(next)
+    },
+  },
+  {
+    name: "v-22945344",
+    path: "/components/input.html",
+    component: GlobalLayout,
+    beforeEnter: (to, from, next) => {
+      ensureAsyncComponentsLoaded("Layout", "v-22945344").then(next)
     },
   },
   {

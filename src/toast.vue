@@ -1,33 +1,32 @@
 <template>
-    <div class="wrapper" :class="toastClasses">
-        <div class="toast" ref="toast" >
+    <div class="gulu-toast" :class="toastClasses">
+        <div class="toast" ref="toast">
             <div class="message">
                 <slot v-if="!enableHtml"></slot>
                 <div v-else v-html="$slots.default[0]"></div>
             </div>
             <div class="line" ref="line"></div>
-            <span class="close" v-if="closeButton" @click="onclickClose">
-            {{closeButton.text}}
-        </span>
+            <span class="close" v-if="closeButton" @click="onClickClose">
+        {{closeButton.text}}
+      </span>
         </div>
     </div>
-
 </template>
-
 <script>
+  //构造组件的选项
   export default {
-    name: "GuluToast",
+    name: 'GuluToast',
     props: {
       autoClose: {
-        type: [Boolean,Number],
-        default:5,
-        validator(value) {
-          return value===false && typeof value ==='number';
+        type: [Boolean, Number],
+        default: 5,
+        validator (value) {
+          return value === false || typeof value === 'number';
         }
       },
       closeButton: {
         type: Object,
-        default() {
+        default () {
           return {
             text: '关闭', callback: undefined
           }
@@ -40,29 +39,27 @@
       position: {
         type: String,
         default: 'top',
-        validator(value) {
+        validator (value) {
           return ['top', 'bottom', 'middle'].indexOf(value) >= 0
         }
       }
     },
-
-    mounted() {
+    mounted () {
+      this.updateStyles()
       this.execAutoClose()
-      this.updateStyle()
     },
     computed: {
-      toastClasses() {
+      toastClasses () {
         return {
           [`position-${this.position}`]: true
         }
       }
     },
     methods: {
-      updateStyle() {
+      updateStyles () {
         this.$nextTick(() => {
           this.$refs.line.style.height =
             `${this.$refs.toast.getBoundingClientRect().height}px`
-
         })
       },
       execAutoClose () {
@@ -72,99 +69,82 @@
           }, this.autoClose * 1000)
         }
       },
-      close() {
+      close () {
         this.$el.remove()
         this.$emit('close')
         this.$destroy()
       },
-      onclickClose() {
+      onClickClose () {
         this.close()
         if (this.closeButton && typeof this.closeButton.callback === 'function') {
-          this.closeButton.callback(this)
+          this.closeButton.callback(this)//this === toast实例
         }
-
       }
     }
   }
 </script>
-
-<style lang="scss" scoped>
+<style scoped lang="scss">
     $font-size: 14px;
     $toast-min-height: 40px;
     $toast-bg: rgba(0, 0, 0, 0.75);
     @keyframes slide-up {
-        0% { opacity: 0;transform: translateY(100%)}
-        100% {opacity: 1;transform: translateY(0%)}
+        0% {opacity: 0; transform: translateY(100%);}
+        100% {opacity: 1;transform: translateY(0%);}
     }
     @keyframes slide-down {
-        0% { opacity: 0;transform: translateY(-100%)}
-        100% {opacity: 1;transform: translateY(0%)}
+        0% {opacity: 0; transform: translateY(-100%);}
+        100% {opacity: 1;transform: translateY(0%);}
     }
     @keyframes fade-in {
-        0% { opacity: 0;}
+        0% {opacity: 0; }
         100% {opacity: 1;}
     }
-    .wrapper {
-        left: 50%;
+    .gulu-toast {
         position: fixed;
+        left: 50%;
         transform: translateX(-50%);
+        $animation-duration: 300ms;
         &.position-top {
             top: 0;
-            .toast{
+            .toast {
                 border-top-left-radius: 0;
                 border-top-right-radius: 0;
-                animation: slide-down 300ms;
+                animation: slide-down $animation-duration;
             }
         }
-
         &.position-bottom {
             bottom: 0;
-            .toast{
+            .toast {
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
-                animation: slide-up 300ms;
+                animation: slide-up $animation-duration;
             }
         }
-
         &.position-middle {
             top: 50%;
-            transform: translate(-50%) translateY(50%);
-            animation: fade-in 300ms;
+            transform: translateX(-50%) translateY(-50%);
+            .toast {
+                animation: fade-in $animation-duration;
+            }
         }
     }
-
     .toast {
-        animation: fade-in 1s;
-        font-size: $font-size;
-        min-height: $toast-min-height;
-        line-height: 1.8;
-
-
+        font-size: $font-size; min-height: $toast-min-height; line-height: 1.8;
         display: flex;
-        align-items: center;
-        color: white;
-        background: $toast-bg;
-        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
-        padding: 0 16px;
-        border-radius: 3px;
-
+        color: white; align-items: center; background: $toast-bg; border-radius: 4px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.50); padding: 0 16px;
         .message {
             padding: 8px 0;
         }
-
         .close {
             padding-left: 16px;
             flex-shrink: 0;
+            cursor: pointer;
         }
-
         .line {
             height: 100%;
-            border: 1px solid #666;
+            border-left: 1px solid #666;
             margin-left: 16px;
         }
-
-
-
     }
-
 </style>
